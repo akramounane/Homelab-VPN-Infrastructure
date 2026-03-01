@@ -35,35 +35,35 @@ Internet
     │
     ▼
 ┌─────────────────────────────────────────┐
-│           Maroc Telecom FTTH            │
-│           ZTE F6600 (OLT)               │
-│           IP Publique Dynamique         │
+│               Maroc Telecom FTTH                │
+│                 ZTE F6600 (OLT)                 │
+│               IP Publique Dynamique             │
 └──────────────────┬──────────────────────┘
-                   │ Port Forwarding
-                   ▼
+                       │ Port Forwarding
+                      ▼
 ┌─────────────────────────────────────────┐
-│           Proxmox VE (Type-1)           │
-│           10.0.1.180/21                 │
-│                                         │
-│  ┌─────────┐ ┌──────────┐ ┌──────────┐ │
-│  │LXC      │ │VM        │ │LXC       │ │
-│  │DDNS     │ │SoftEther │ │FreeRADIUS│ │
-│  │ddclient │ │VPN Server│ │Auth      │ │
-│  │         │ │10.0.1.181│ │10.0.1.182│ │
-│  └─────────┘ └──────────┘ └──────────┘ │
-│                                         │
-│  Réseau segmenté /21 :                  │
-│  10.0.0.0/24  →  Équipements réseau    │
-│  10.0.1.0/24  →  Infra & serveurs      │
-│  10.0.2.0/24  →  WiFi & accès         │
-│  10.0.3.0/24  →  Domotique & caméras  │
+│               Proxmox VE (Type-1)               │
+│                  10.0.1.180/21                  │
+│                                                 │
+│  ┌─────────┐ ┌──────────┐ ┌──────────┐    │
+│  │  LXC      │ │  VM        │ │  LXC       │    │
+│  │  DDNS     │ │  SoftEther │ │  FreeRADIUS│    │
+│  │  ddclient │ │  VPN Server│ │  Auth      │    │
+│  │           │ │  10.0.1.181│ │  10.0.1.182│    │
+│  └─────────┘ └──────────┘ └──────────┘    │
+│                                                 │
+│          Réseau segmenté /21 :                  │
+│          10.0.0.0/24  →  Équipements réseau    │
+│          10.0.1.0/24  →  Infra & serveurs      │
+│          10.0.2.0/24  →  WiFi & accès          │
+│          10.0.3.0/24  →  Domotique & caméras   │
 └─────────────────────────────────────────┘
                    │ DNS queries
                    ▼
 ┌─────────────────────────────────────────┐
-│         Oracle Cloud (Always Free)      │
-│         Pi-hole + dnsmasq               │
-│         dns.example.com — X.X.X.X   │
+│         Oracle Cloud (Always Free)              │
+│         Pi-hole + dnsmasq                       │
+│         dns.example.com — X.X.X.X               │
 └─────────────────────────────────────────┘
 ```
 
